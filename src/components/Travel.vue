@@ -3,17 +3,7 @@
       <!-- 日历 -->
       <el-row>
         <el-col>
-            <template>
-              <div class="block">
-                <el-date-picker
-                  v-model="value1"
-                  type="daterange"
-                  range-separator="-"
-                  start-placeholder="DEPARTURE DATE"
-                  end-placeholder="RETURN DATE">
-                </el-date-picker>
-              </div>
-       </template>
+            
         </el-col>
         </el-row>
       
@@ -31,7 +21,7 @@
            <div>
              
            </div>
-           <el-col>
+           </el-col>
        </el-row>
 
 
@@ -41,7 +31,7 @@
 export default {
     data(){
         return{
-            value1:''
+            
 
         }
     }

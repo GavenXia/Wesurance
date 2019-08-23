@@ -53,12 +53,10 @@
     </el-row>
 
     <!-- 底部 -->
-    <el-row>
-      <el-col>
+    <div class="footer">
          <span class="Powered">Powered By</span>
-        <span><img src="" alt=""></span>
-      </el-col>
-    </el-row>
+        <span class="footerimgs"><img class="footerimg" src="../assets/images/Logo A@3x.png" alt=""></span>
+    </div>
   </div>
 </template>
 
@@ -89,17 +87,22 @@ export default {
   border-left: none;
   border-right: none; 
   border-bottom-color:black; 
+  height: 40px;
+  width: 140px;
   
 }
 .mobile-number{
   width: 525px;
+  height: 30px;
   border-top: none;
   border-left: none;
   border-right: none;
   border-bottom-color:#1f1e1e; 
 }
 .email{
-  width: 630px;
+  width: 670px;
+  height: 30px;
+
   border-top: none;
   border-left: none;
   border-right: none;
@@ -109,7 +112,7 @@ export default {
        /* placeholder颜色  */
        color: #e7e8e9;
        /* placeholder字体大小  */
-       font-size: 30px;
+       font-size: 25nppx;
     }
 .tixing{
   font-size:11px;
@@ -140,7 +143,26 @@ export default {
  }
 .Powered{
   display: inline-block;
+  font-size:22px;
   margin-top: 100px;
-  margin-left: 50px;
+  margin-left: -75px;
+}
+.footer {
+  text-align: center;
+  vertical-align: middle;
+}
+.footerimgs{
+  display: inline-block;
+  vertical-align: middle;
+  width: 312px;
+  height: 94px;
+  line-height: 50px;
+}
+.footerimg{
+  display: inline-block;
+  vertical-align: middle;
+  
+   width: 100%;
+   height: 100%;
 }
 </style>
