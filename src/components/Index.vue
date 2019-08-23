@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div style="padding:15px;">
     <!-- 标题 -->
     <el-row :gutter="10">
         <el-col :xs="24">
@@ -12,7 +12,7 @@
     <!-- Welcome -->
     <el-row>
       <el-col :xs="6">
-        <h4>Welcome!</h4>       
+        <h2>Welcome!</h2>       
       </el-col>
       <!-- <el-col :xs="18">
       </el-col> -->
@@ -27,14 +27,9 @@
     
     <!-- 表单 -->
     <el-row>
-      <el-col>
-        <!-- <el-form ref="form" >
-         <el-form-item label="Enter you mobile number">
-          <div class="dropdown"></div>
-         </el-form-item>
-        </el-form> -->
+      <el-col>        
         <form>
-          <div>Enter you mobile number</div><br>
+          <p>Enter you mobile number</p><br>
           <span >
             <select name="drop" class="dropdown">
             <option value="+852">+852</option>
@@ -44,14 +39,24 @@
             </select>
           </span>
           <input class="mobile-number" type="text" placeholder="8888 8888"><br>
-          <div style="margin-top:10px;"> Enter your Email</div><br>
+          <p style="margin-top:20px;"> Enter your Email</p><br>
           <input class="email" type="email" placeholder="example@email.com">
-          <div style="font-size:10px;">(ePolicy will be sent to your email address written above)</div>
+          <div style="font-size:10px;margin-top:8px;">(ePolicy will be sent to your email address written above)</div>
           <p class="tixing">If you click on “Next” below, it means that you agree to our <span class="terms">terms</span> and <span class="privacy">privacy policies</span> .</p>
-          <button class="next">
-            Next
-          </button>
+          <div class="button-bar">
+            <button class="next">
+              Next
+            </button>
+          </div>
           </form>
+      </el-col>
+    </el-row>
+
+    <!-- 底部 -->
+    <el-row>
+      <el-col>
+         <span class="Powered">Powered By</span>
+
       </el-col>
     </el-row>
   </div>
@@ -87,21 +92,28 @@ export default {
   
 }
 .mobile-number{
-  width: 285px;
+  width: 525px;
   border-top: none;
   border-left: none;
   border-right: none;
   border-bottom-color:#1f1e1e; 
 }
 .email{
-  width: 340px;
+  width: 630px;
   border-top: none;
   border-left: none;
   border-right: none;
   border-bottom-color:#1f1e1e; 
 }
+ input::-webkit-input-placeholder {
+       /* placeholder颜色  */
+       color: #e7e8e9;
+       /* placeholder字体大小  */
+       font-size: 30px;
+    }
 .tixing{
   font-size:11px;
+  margin-top: 70px;
 }
 .terms{
   color:#0081ff;
@@ -113,16 +125,22 @@ export default {
 
  }
  .next{
-   width: 180px;
-   height: 55px;   
+   width: 290px;
+   height: 90px;   
    border: none;
-   border-radius: 5px;
+   border-radius: 10px;
    background:#02A447;
    color: white;   
    text-align: center;
-   font-size:18px;
-   
-
+   font-size:30px;
+   margin-top: 20px;
  }
-
+ .button-bar {
+   text-align: center;
+ }
+.Powered{
+  display: inline-block;
+  margin-top: 100px;
+  margin-left: 50px;
+}
 </style>
