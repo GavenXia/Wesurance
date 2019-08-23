@@ -7,8 +7,8 @@ import router from './router'
 import 'lib-flexible/flexible.js'
 import 'normalize.css/normalize.css' // 去除默认样式
 
-import ElementUI from 'element-ui';
-import 'element-ui/lib/theme-chalk/index.css';
+import Cube from 'cube-ui'
+Vue.use(Cube)
 
 // 解决移动端click事件300毫秒延迟方法
 import FastClick from 'fastclick'
@@ -22,7 +22,6 @@ if ('addEventListener' in document) {
   )
 }
 
-Vue.use(ElementUI);
 Vue.config.productionTip = false
 
 
