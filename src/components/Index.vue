@@ -56,7 +56,7 @@
     <el-row>
       <el-col>
          <span class="Powered">Powered By</span>
-
+        <span><img src="" alt=""></span>
       </el-col>
     </el-row>
   </div>
