@@ -26,9 +26,11 @@
           <div><span>Family and friends</span><span><i @click="handlecount('sub','friends')" class="action-button sub"></i><span>{{count.friends}}</span><i @click="handlecount('add','friends')" class="action-button add"></i></span></div>
         </div>
         <div class="button-bar">
+          <router-link to="/info">
             <button class="next">
               Show My Results
             </button>
+            </router-link>
           </div>
       </div>
     </div>

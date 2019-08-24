@@ -26,10 +26,12 @@
           <cube-input class="input-item" v-model="form.email" placeholder="example@email.com"></cube-input>
           <div class="form-tip">(ePolicy will be sent to your email address written above)</div>
           <p class="tixing">If you click on “Next” below, it means that you agree to our <span class="terms">terms</span> and <span class="privacy">privacy policies</span> .</p>
-          <div class="button-bar">
+          <div class="button-bar" >
+            <router-link to="/Travel">
             <button class="next">
               Next
             </button>
+            </router-link>
           </div>
 
     <!-- 底部 -->
@@ -177,6 +179,7 @@ export default {
 
  }
  .button-bar {
+   margin: 0 auto;
    text-align: center;
    margin-top: 54px;
    margin-bottom: 102px;
