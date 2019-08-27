@@ -1,12 +1,12 @@
 <template>
     <div class="page-wrap">
         <div class="imgs">
-            <img class="img" src="@/assets/images/8.png" alt="">
+            <img class="img" src="@/assets/images/9.png" alt="">
         </div>
        <div class="button-bar" >
             <router-link to="/Payment">
             <button class="proceed">
-              Proceed
+              Confirm
             </button>
             </router-link>
          </div>
@@ -19,6 +19,13 @@ export default {
         return{
 
         }
+    },
+    created(){
+      const toast = this.$createToast({
+        time: 1000,
+        txt: 'loading...'
+      })
+      toast.show()
     }
 }
 </script>

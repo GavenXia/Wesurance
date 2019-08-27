@@ -25,12 +25,13 @@
           <div><span>My Child <i>aged below 18</i></span><span><i @click="handlecount('sub','child')" class="action-button sub"></i><span>{{count.child}}</span><i @click="handlecount('add','child')" class="action-button add"></i></span></div>
           <div><span>Family and friends</span><span><i @click="handlecount('sub','friends')" class="action-button sub"></i><span>{{count.friends}}</span><i @click="handlecount('add','friends')" class="action-button add"></i></span></div>
         </div>
-        <div class="button-bar">
+
+        <div class="button-bar">          
           <router-link to="/info">
             <button class="next">
               Show My Results
             </button>
-            </router-link>
+            </router-link>           
           </div>
       </div>
     </div>
@@ -41,19 +42,26 @@ export default {
     data(){
         return{
           date: {
-            departureDate: '2019-08-04',
+            departureDate: '2019-08-26',
             returnDate: '',
             departureDateObj : new Date(),
             returnDateObj: new Date()
           },
           count: {
             myself: 0,
-            spouse: 1,
+            spouse: 0,
             child: 0,
             friends: 0
           },
           dateType: ''
         }
+    },
+    created(){
+      const toast = this.$createToast({
+        time: 1000,
+        txt: 'loading...'
+      })
+      toast.show()
     },
     methods: {
       handlecount (type,field) {
@@ -82,12 +90,13 @@ export default {
         this.datePicker.show()
           setTimeout(() => {
             this.datePicker.$updateProps({
-              title: 'Return Date',
+              title: type === 'departureDate' ?  'Departure Date' : 'Return Date',
               value: type === 'departureDate' ? this.date.departureDateObj : this.date.returnDateObj,
             })
           }, 0)
       },
       selectHandle(date, selectedVal, selectedText) {
+        console.log(date,selectedVal,selectedText)
           this.date[this.dateType] = this.dateTozero(selectedVal).join('-');
           this.date[`${this.dateType}Obj`] = date;
       },
@@ -157,7 +166,7 @@ export default {
           color:@gray;
           font-weight:500;
           margin: 0px 0 26px 0;
-          font-size: 20px;
+          font-size: 22px;
           line-height: 24px;
         }
         .date-value {
@@ -236,6 +245,8 @@ export default {
       margin-top: 54px;
       margin-bottom: 102px;
     }
+    
+    
     .next{
       width: 388px;
       height: 130px;

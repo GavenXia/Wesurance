@@ -6,7 +6,7 @@
        <div class="button-bar" >
             <router-link to="/ConfirmMember">
             <button class="proceed">
-              Proceed
+              Confirm
             </button>
             </router-link>
          </div>
@@ -19,6 +19,13 @@ export default {
         return{
 
         }
+    },
+    created(){
+      const toast = this.$createToast({
+        time: 1000,
+        txt: 'loading...'
+      })
+      toast.show()
     }
 }
 </script>

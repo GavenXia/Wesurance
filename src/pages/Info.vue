@@ -1,5 +1,6 @@
 <template>
     <div class="page-wrap">
+      
         <div class="imgs">
             <img class="img" src="@/assets/images/4.png" alt="">
         </div>
@@ -10,6 +11,7 @@
             </button>
             </router-link>
          </div>
+        
     </div>
 </template>
 
@@ -19,6 +21,13 @@ export default {
         return{
 
         }
+    },
+    created(){
+      const toast = this.$createToast({
+        time: 1000,
+        txt: 'loading...'
+      })
+      toast.show()
     }
 }
 </script>
@@ -26,7 +35,9 @@ export default {
 <style lang="less" scoped>
   @import '~style/mixin.less';
  .page-wrap{
+   
      padding: 34px;
+     
      .imgs{
         width: 100%;
      }

@@ -1,7 +1,8 @@
 <template>
   <div class="page-wrap">
     <div class="header">
-      <span>Fintech</span><span>travel.com</span>
+      <!-- <span>Fintech</span><span>travel.com</span> -->
+      <img src="@/assets/images/Fintechtravel.com@xxxhdpi.png" alt="">
     </div>
     <p class="title">Welcome!</p>
     <p class="tip-text">Enter your mobile number and email to continue.</p>
@@ -58,7 +59,14 @@ export default {
         email: '',
       }
     }
-  }
+  },
+    created(){
+      const toast = this.$createToast({
+        time: 1000,
+        txt: 'loading...'
+      })
+      toast.show()
+    }
 }
 </script>
 
@@ -66,25 +74,22 @@ export default {
 <style lang="less" scoped>
 @import '~style/mixin.less';
 .page-wrap {
-  padding: 170px 25px 154px 54px;
+  padding: 80px 25px 154px 54px;
   background: @background;
   .header {
-  font-weight: bold;
-  font-size: 42px;
   text-align: center;
-  margin-bottom: 158px;
-  >span {
-    &:first-child {
-      color: @blue
-     }
-    &:last-child {
-      color: rgb(239, 69, 95)
-     }
-   }
+  width: 500px;
+  height: 250px;
+  margin: 0 auto;
+  img{
+  width: 100%;
+  height: 100%;
+  }
+  
   }
   .title {
     color: #000;
-    font-weight: 500;
+    font-weight: 600;
     font-size: 48px;
     line-height: 58px;
   }
@@ -94,6 +99,7 @@ export default {
     letter-spacing: 2px;
     color:@gray;
     margin-bottom: 102px;
+    margin-top: 20px;
   }
   .label {
     font-size: 24px;

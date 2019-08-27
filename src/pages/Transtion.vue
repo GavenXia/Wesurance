@@ -1,14 +1,17 @@
 <template>
     <div class="page-wrap">
-        <div class="imgs">
+        <!-- <div class="imgs">
             <img class="img" src="@/assets/images/5.png" alt="">
-        </div>
-       <div class="button-bar" >
-            <router-link to="/Prompt">
-            <button class="proceed">
-              Proceed
-            </button>
-            </router-link>
+        </div> -->
+         
+         <div></div>
+         <div class="imgs">
+           <span class="wes">
+             <img src="@/assets/images/wesuranse 3-01@3x.png" alt="">
+           </span>  
+           <span class="dev">
+             <img src="@/assets/images/Developer@3x.png" alt="">
+            </span>
          </div>
     </div>
 </template>
@@ -22,9 +25,9 @@ export default {
       }
   },
 
-  created() {
-    this.countDown();
-  },
+  // created() {
+  //   this.countDown();
+  // },
 
   methods: {
     countDown() {
@@ -61,28 +64,45 @@ export default {
  .page-wrap{
      padding: 34px;
      .imgs{
-        width: 100%;
+     display: flex;
+     justify-content: space-between;
+     .wes{
+      display: inline-block;
+      width: 200px;
+      height: 200px;
+     
+      text-align: center;
+      border-radius: 50%;
+      box-shadow: 0px 8px 40px 0 rgba(0, 0, 0, 0.14);
+      img{
+        width: 90%;
+        height: 90%;
+        margin-top: 13px;
+      }
      }
-     .img{
-         width: 100%;
-         height: 100%;
+     .dev{
+      display: inline-block;
+      width: 200px;
+      height: 200px;
+      text-align: center;
+      border-radius: 50%;
+      box-shadow: 0px 8px 40px 0 rgba(0, 0, 0, 0.14);
+
+      img{
+        width: 60%;
+        height: 60%;
+        margin-top: 30px;
+
+      }
+      }
      }
-     .button-bar {
-   margin: 0 auto;
-   text-align: center;
-   margin-top: 54px;
-   margin-bottom: 102px;
- }
- .proceed{
-   width: 388px;
-   height: 130px;
-   line-height: 130px;
-   border: none;
-   border-radius: 10px;
-   background:rgb(2, 164, 71);
-   color:#fff;
-   text-align: center;
-   font-size:36px;
- }
+    //  .imgs{
+    //     width: 100%;
+    //  }
+    //  .img{
+    //      width: 100%;
+    //      height: 100%;
+    //  }
+
  }
 </style>

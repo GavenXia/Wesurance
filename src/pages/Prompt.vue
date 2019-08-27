@@ -1,7 +1,10 @@
 <template>
     <div class="page-wrap">
-        <div class="imgs">
+        <!-- <div class="imgs">
             <img class="img" src="@/assets/images/6.png" alt="">
+        </div> -->
+        <div>
+          <!-- <img src="@/assets/images/" alt=""> -->
         </div>
        <div class="button-bar" >
             <router-link to="/MemberData">
@@ -19,6 +22,13 @@ export default {
         return{
 
         }
+    },
+    created(){
+      const toast = this.$createToast({
+        time: 1000,
+        txt: 'loading...'
+      })
+      toast.show()
     }
 }
 </script>
@@ -27,13 +37,13 @@ export default {
   @import '~style/mixin.less';
  .page-wrap{
      padding: 34px;
-     .imgs{
-        width: 100%;
-     }
-     .img{
-         width: 100%;
-         height: 100%;
-     }
+    //  .imgs{
+    //     width: 100%;
+    //  }
+    //  .img{
+    //      width: 100%;
+    //      height: 100%;
+    //  }
      .button-bar {
    margin: 0 auto;
    text-align: center;

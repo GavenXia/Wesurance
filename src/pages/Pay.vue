@@ -1,10 +1,10 @@
 <template>
     <div class="page-wrap">
         <div class="imgs">
-            <img class="img" src="@/assets/images/10.png" alt="">
+            <img class="img" src="@/assets/images/11.png" alt="">
         </div>
        <div class="button-bar" >
-            <router-link to="/Pay">
+            <router-link to="/Complete">
             <button class="proceed">
               Checkout
             </button>
