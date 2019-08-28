@@ -15,13 +15,12 @@ import Complete from 'pages/Complete'
 
 
 
-
 Vue.use(Router)
 
 export default new Router({
   routes: [
     {
-      path: '/Index',
+      path: '/',
       name: 'index',
       component: Index
     },
@@ -46,63 +45,39 @@ export default new Router({
       component: Transtion
     },
     {
-      path: '/',
+      path: '/Prompt',
       name: 'prompt',
       component: Prompt
-      // meta: {
-      //   title: 'important notes', //页面标题 为空表示没有标题栏
-      //   hasClose: false //是否具有可关闭功能
-      // }
     },
     {
       path: '/MemberData',
       name: 'memberData',
       component: MemberData
-      // meta: {
-      //   title: 'Add Member', //页面标题 为空表示没有标题栏
-      //   hasClose: false //是否具有可关闭功能
-      // }
     },
     {
       path: '/ConfirmMember',
       name: 'confirmMember',
       component: ConfirmMember
-      // meta: {
-      //   title: 'Add Member', //页面标题 为空表示没有标题栏
-      //   hasClose: false //是否具有可关闭功能
-      // }
     },
     {
       path: '/ConfirmOrder',
       name: 'confirmOrder',
       component: ConfirmOrder
-      // meta: {
-      //   title: 'Your Order', //页面标题 为空表示没有标题栏
-      //   hasClose: false //是否具有可关闭功能
-      // }
     },
     {
       path: '/Payment',
       name: 'payment',
       component: Payment
-      // meta: {
-      //   title: 'Payment', //页面标题 为空表示没有标题栏
-      //   hasClose: false //是否具有可关闭功能
-      // }
     },
     {
       path: '/Pay',
       name: 'pay',
       component: Pay
-      // meta: {
-      //   title: 'Payment', //页面标题 为空表示没有标题栏
-      //   hasClose: false //是否具有可关闭功能
-      // }
     },
     {
       path: '/Complete',
       name: 'complete',
       component: Complete
-    }
+    },
   ]
 })

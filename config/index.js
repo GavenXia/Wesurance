@@ -10,7 +10,16 @@ module.exports = {
     // Paths
     assetsSubDirectory: 'static',
     assetsPublicPath: '/',
-    proxyTable: {},
+    proxyTable: {
+      '/api': {
+        target: 'http://172.20.10.6:8080', // 接口的域名  这个地方没法做配置手动改吧与dev保持一致
+        // secure: false,  // 如果是https接口，需要配置这个参数
+        changeOrigin: true, // 如果接口跨域，需要进行这个参数配置
+        pathRewrite: {
+          '^/api': ''
+        }
+      }
+    },
 
     // Various Dev Server settings
     host: '192.168.30.176', // can be overwritten by process.env.HOST
@@ -37,6 +46,9 @@ module.exports = {
   },
 
   build: {
+    // 添加test、prod环境变量配置
+    prodEnv: require('./prod.env'),
+    testEnv: require('./test.env'),
     // Template for index.html
     index: path.resolve(__dirname, '../dist/index.html'),
 

@@ -29,7 +29,7 @@
           <p class="tixing">If you click on “Next” below, it means that you agree to our <span class="terms">terms</span> and <span class="privacy">privacy policies</span> .</p>
           <div class="button-bar" >
             <router-link to="/Travel">
-            <button class="next">
+            <button @click="next" class="next">
               Next
             </button>
             </router-link>
@@ -44,6 +44,7 @@
 </template>
 
 <script>
+import http from '@/api/http'
 export default {
   name: 'Index',
   data () {
@@ -61,11 +62,38 @@ export default {
     }
   },
     created(){
+      this.register()
       const toast = this.$createToast({
         time: 1000,
         txt: 'loading...'
       })
       toast.show()
+    },
+   
+    methods: {
+      next() {
+        this.register()
+      },
+      register() {
+        const params =  {
+          "phone":"5d15cda9971f320d262b810a",
+          "phone_country_code":"03dfd96d875d43ba8ced522f3bbc0179",
+          "web":"www.baidu.com",
+          "email":"1448682783@qq.com"
+        }
+        const requestConfig = {
+          url:'/wesuapi4/web/add',
+          method: 'post',
+          data: params
+        }
+        console.log(this.$http)
+        console.log(http)
+       this.$http.post('/wesupromo/web/add',params).then( 
+          res => {
+            console.log(res)
+          }
+        )
+      }
     }
 }
 </script>

@@ -1,10 +1,10 @@
 <template>
     <div class="page-wrap">
-        <!-- <div class="imgs">
+        <div class="imgs">
             <img class="img" src="@/assets/images/5.png" alt="">
-        </div> -->
+        </div>
          
-         <div></div>
+         <!-- <div></div>
          <div class="imgs">
            <span class="wes">
              <img src="@/assets/images/wesuranse 3-01@3x.png" alt="">
@@ -12,7 +12,7 @@
            <span class="dev">
              <img src="@/assets/images/Developer@3x.png" alt="">
             </span>
-         </div>
+         </div> -->
     </div>
 </template>
 
@@ -25,9 +25,9 @@ export default {
       }
   },
 
-  // created() {
-  //   this.countDown();
-  // },
+  created() {
+    this.countDown();
+  },
 
   methods: {
     countDown() {
@@ -96,13 +96,13 @@ export default {
       }
       }
      }
-    //  .imgs{
-    //     width: 100%;
-    //  }
-    //  .img{
-    //      width: 100%;
-    //      height: 100%;
-    //  }
+     .imgs{
+        width: 100%;
+     }
+     .img{
+         width: 100%;
+         height: 100%;
+     }
 
  }
 </style>
