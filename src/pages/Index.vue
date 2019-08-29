@@ -1,8 +1,8 @@
 <template>
   <div class="page-wrap">
-    <div class="header">
+    <div class="header progressive" >
       <!-- <span>Fintech</span><span>travel.com</span> -->
-      <img src="@/assets/images/Fintechtravel.com@xxxhdpi.png" alt="">
+      <img class="preview" v-progressive="imgs.preview"  :src="imgs.src" alt="">
     </div>
     <p class="title">Welcome!</p>
     <p class="tip-text">Enter your mobile number and email to continue.</p>
@@ -13,7 +13,7 @@
             <cube-select
               class="areaSelect"
               v-model="areaCode"
-              placeholder=' '
+              placeholder=' ' 
               title=' '
               cancelTxt='Cancel'
               confirmTxt='Confirm'
@@ -49,6 +49,12 @@ export default {
   name: 'Index',
   data () {
     return {
+       imgs:
+         {
+           src:require('@/assets/images/Fintechtravel.com@xxxhdpi.png'),
+           preview:require('@/assets/images/Fintechtravel.com@xxxhdpi.png')
+
+         },
       areaCode: '+852',
       areaOptions: [
         { value: '+852', text: 'Hong Kong +852'},
@@ -72,7 +78,7 @@ export default {
    
     methods: {
       next() {
-        this.register()
+        // this.register()
       },
       register() {
         const params =  {
@@ -81,11 +87,11 @@ export default {
           "web":"www.baidu.com",
           "email":"1448682783@qq.com"
         }
-        const requestConfig = {
-          url:'/wesuapi4/web/add',
-          method: 'post',
-          data: params
-        }
+        // const requestConfig = {
+        //   url:'/wesuapi4/web/add',
+        //   method: 'post',
+        //   data: params
+        // }
         console.log(this.$http)
         console.log(http)
        this.$http.post('/wesupromo/web/add',params).then( 

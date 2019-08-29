@@ -1,6 +1,8 @@
 <template>
     <div class="page-wrap">
-      <img class="banner" src="@/assets/images/starrTraveLeadEssential.png" alt="">
+    <div class="header progressive" >
+      <img class="banner preview" v-progressive="imgs.preview"  :src="imgs.src"  alt="">
+    </div>
       <div class="container-wrap">
         <p class="title">Travel Insurance</p>
         <p class="part-title"><span>Departure and Return Date</span></p>
@@ -41,6 +43,12 @@
 export default {
     data(){
         return{
+          imgs:
+         {
+           src:require('@/assets/images/starrTraveLeadEssential.png'),
+           preview:require('@/assets/images/starrTraveLeadEssential.png')
+
+         },
           date: {
             departureDate: '2019-08-26',
             returnDate: '',
