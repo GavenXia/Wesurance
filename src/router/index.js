@@ -2,6 +2,7 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import Index from 'pages/Index'
 import Travel from 'pages/Travel'
+import TravelInfo from 'pages/TravelInfo'
 import Infoconfirm from 'pages/Infoconfirm'
 import Info from 'pages/Info'
 import Transtion from 'pages/Transtion'
@@ -12,6 +13,8 @@ import ConfirmOrder from 'pages/ConfirmOrder'
 import Payment from 'pages/Payment'
 import Pay from 'pages/Pay'
 import Complete from 'pages/Complete'
+import CoverageDetails from 'pages/CoverageDetails'
+
 
 
 
@@ -30,7 +33,12 @@ export default new Router({
       component: Travel
     },
     {
-      path: 'Infoconfirm',
+      path: '/TravelInfo',
+      name: 'travelInfo',
+      component: TravelInfo
+    },
+    {
+      path: '/Infoconfirm',
       name: 'infoconfirm',
       component: Infoconfirm
     },
@@ -79,5 +87,10 @@ export default new Router({
       name: 'complete',
       component: Complete
     },
+    {
+      path: '/CoverageDetails',
+      name: 'coverageDetails',
+      component: CoverageDetails
+    }
   ]
 })
