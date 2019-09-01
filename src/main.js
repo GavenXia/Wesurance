@@ -4,6 +4,7 @@ import Vue from 'vue'
 import App from './App'
 import router from './router'
 import * as http from '@/api/http'
+import 'components/componentRegister.js'
 // 移动端适配
 import 'lib-flexible/flexible.js'
 import 'normalize.css/normalize.css' // 去除默认样式
@@ -26,7 +27,6 @@ if ('addEventListener' in document) {
 Vue.prototype.$http = http.default
 
 Vue.config.productionTip = false
-
 
 
 /* eslint-disable no-new */
