@@ -1,7 +1,8 @@
 <template>
   <div class="page-wrap">
     <div class="imgs">
-            <img class="img" src="@/assets/images/9.png" alt="">
+            <img class="img" src="@/assets/teafInsurance/Order Copy.png" alt="">
+            <!-- images/9.png -->
     </div>
     <!-- <div class="plan-item">
       <p class="plan">Your plan</p>

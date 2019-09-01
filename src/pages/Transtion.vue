@@ -1,7 +1,8 @@
 <template>
     <div class="page-wrap">
         <div class="imgs">
-            <img class="img" src="@/assets/images/5.png" alt="">
+            <img class="img" src="@/assets/teafInsurance/go copy@xhdpi.png" alt="">
+            <!-- images/5.png -->
         </div>
          
          <!-- <div></div>

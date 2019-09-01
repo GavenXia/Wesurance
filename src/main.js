@@ -12,6 +12,11 @@ import 'normalize.css/normalize.css' // 去除默认样式
 import Cube from 'cube-ui'
 Vue.use(Cube)
 
+import progressive from 'progressive-image/dist/vue'; // 渐进式
+Vue.use(progressive, {
+  removePreview: true,
+  scale: true
+})
 // 解决移动端click事件300毫秒延迟方法
 import FastClick from 'fastclick'
 if ('addEventListener' in document) {

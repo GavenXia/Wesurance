@@ -1,9 +1,9 @@
 <template>
   <div class="page-wrap">
-    <!-- <div class="imgs">
+    <div class="imgs">
             <img class="img" src="@/assets/images/12.png" alt="">
-    </div>-->
-    <div class="finish-item">
+    </div>
+    <!-- <div class="finish-item">
       <p class="done-img">
         <img src="@/assets/images/done@3x.png" alt />
       </p>
@@ -22,7 +22,7 @@
 
     <div class="finish-bottom">
      I acknowledge and agree that Insurer shall use the Personal data I have provided for the purposes of providing insurance services in accordance with Insurer's Privacy Policy. 
-    </div>
+    </div> -->
 
     <div class="button-bar">
       <button class="proceed">Finish</button>
@@ -49,13 +49,13 @@ export default {
 @import "~style/mixin.less";
 .page-wrap {
   padding: 34px;
-  //  .imgs{
-  //     width: 100%;
-  //  }
-  //  .img{
-  //      width: 100%;
-  //      height: 100%;
-  //  }
+   .imgs{
+      width: 100%;
+   }
+   .img{
+       width: 100%;
+       height: 100%;
+   }
   .finish-item {
     text-align: center;
     margin-top: 200px;
@@ -98,11 +98,9 @@ export default {
   .finish-bottom{
     color: rgb(209, 207, 207);
     text-align: center;
-    // letter-spacing: 0.34px;
     line-height: 30px;
     padding-top: 300px;
     padding-bottom: 70px;
-    font-family: HelveticaNeue;
   }
   .button-bar {
     margin: 0 auto;

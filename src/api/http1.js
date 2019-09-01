@@ -2,7 +2,7 @@
  * @Author: gavin
  * @Date: 2019-08-27 17:17:24
  * @Last Modified by: mikey.zhaopeng
- * @Last Modified time: 2019-08-28 15:26:10
+ * @Last Modified time: 2019-08-28 18:59:37
  */
 // 在http.js中引入axios
 import axios from 'axios'; // 引入axios
@@ -13,11 +13,10 @@ import { Toast } from 'cube-ui';
 let toast = null;
 
 const service = axios.create({
+    baseURL: domain[process.env.ENV_CONFIG],
     // 设置超时时间
     timeout: 10000,
   })
-
-service.defaults.baseURL = domain[process.env.ENV_CONFIG];
 // post请求头
 service.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded;charset=UTF-8';
 
@@ -61,7 +60,7 @@ service.interceptors.response.use(
   },
   // 服务器状态码不是200的情况
   error => {
-      if (error.response.status) {
+      /* if (error.response.status) {
           loading.hide();
           switch (error.response.status) {
               // 401: 未登录
@@ -102,7 +101,7 @@ service.interceptors.response.use(
                 }).show()
           }
           return Promise.reject(error.response);
-      }
+      } */
       return Promise.reject(error.response)
   }
 );

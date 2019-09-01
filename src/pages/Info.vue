@@ -2,7 +2,7 @@
     <div class="page-wrap">
       
         <div class="imgs">
-            <img class="img" src="@/assets/images/4.png" alt="">
+            <img class="img" src="@/assets/teafInsurance/product page copy@xhdpi.png" alt="">
         </div>
        <div class="button-bar" >
             <router-link to="/Transtion">

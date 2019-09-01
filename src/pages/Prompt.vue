@@ -1,7 +1,8 @@
 <template>
   <div class="page-wrap">
     <div class="imgs">
-            <img class="img" src="@/assets/images/6.png" alt="">
+            <img class="img" src="@/assets/teafInsurance/important notes copy@xhdpi.png" alt="">
+            <!-- images/6.png -->
     </div>
     <!-- <div class="head-imgs">
       <img class="head-img" src="@/assets/images/CompanyLogo@3x.png" alt />
